@@ -77,10 +77,10 @@ const AutoSuggest = ({
       <ul
         {...getMenuProps()}
         className={`${
-          (suggestions === undefined || !isOpen || suggestions.length === 0) &&
-          "hidden"
+          (suggestions === undefined || !isOpen) && "hidden"
         } absolute mt-2 overflow-y-auto border rounded bg-neutral-50 max-h-64 w-full shadow-lg`}
       >
+        {suggestions?.length === 0 && <li className="p-2">No matches found</li>}
         {isOpen &&
           suggestions?.map((item, index) => (
             <li
@@ -92,7 +92,7 @@ const AutoSuggest = ({
              }
              ${
                selectedItem === item && "bg-blue-300 font-bold"
-             } py-2 px-2 cursor-pointer
+             } p-2 cursor-pointer
             `}
               key={`${item.name}${index}`}
               {...getItemProps({ item, index })}
