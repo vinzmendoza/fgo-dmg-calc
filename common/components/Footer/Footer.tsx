@@ -13,7 +13,7 @@ const Footer = () => {
         >
           Vinz
         </a>{" "}
-        <span className="text-neutral-600">&#40;Vinz#0775&#x29;</span>
+        <span className="text-neutral-600">&#x28;Vinz#0775&#x29;</span>
       </p>
       <p className="text-center">
         Data sourced from{" "}
