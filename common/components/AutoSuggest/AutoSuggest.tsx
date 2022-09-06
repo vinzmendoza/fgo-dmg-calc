@@ -1,4 +1,5 @@
 import { Enemy, Servant } from "@atlasacademy/api-connector";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import useAutoSuggest from "../../hooks/useAutoSuggest";
@@ -103,7 +104,8 @@ const AutoSuggest = ({
       <div className="h-4">
         {errors.autoSuggest?.type === "checkServantSelected" &&
           (servantWatched === undefined || servantWatched === "") && (
-            <span className="text-sm text-red-500">
+            <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+              <ExclamationTriangleIcon />
               Search and select a servant first
             </span>
           )}

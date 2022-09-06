@@ -7,6 +7,7 @@ import { AutoSuggest } from "../AutoSuggest";
 import { ServantNpType } from "./ServantNpType";
 import { FormValues } from "../../utils/interface";
 import { Tooltip } from "../Tooltip";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 
 type ComponentProps = {
   servantData: Servant.Servant | Enemy.Enemy | undefined;
@@ -129,11 +130,20 @@ const ServantStatus = ({
           <div className="h-4">
             {errors.lvl &&
               (errors.lvl.type === "required" ? (
-                <span className="text-sm text-red-500">Level is required</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  <ExclamationTriangleIcon />
+                  Level is required
+                </span>
               ) : errors.lvl.type === "min" ? (
-                <span className="text-sm text-red-500">Minimum level is 1</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  <ExclamationTriangleIcon />
+                  Min level is 1
+                </span>
               ) : (
-                <span className="text-sm text-red-500">Max level is 120</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  <ExclamationTriangleIcon />
+                  Max level is 120
+                </span>
               ))}
           </div>
         </div>
@@ -153,13 +163,22 @@ const ServantStatus = ({
           <div className="h-4">
             {errors.npLvl &&
               (errors.npLvl.type === "required" ? (
-                <span className="text-sm text-red-500">
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  <ExclamationTriangleIcon />
                   NP Level is required
                 </span>
               ) : errors.npLvl.type === "min" ? (
-                <span className="text-sm text-red-500">Min NP level is 1</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  {" "}
+                  <ExclamationTriangleIcon />
+                  Min NP level is 1
+                </span>
               ) : (
-                <span className="text-sm text-red-500">Max NP level is 5</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  {" "}
+                  <ExclamationTriangleIcon />
+                  Max NP level is 5
+                </span>
               ))}
           </div>
         </div>
@@ -177,9 +196,17 @@ const ServantStatus = ({
           <div className="h-4">
             {errors.fou &&
               (errors.fou.type === "min" ? (
-                <span className="text-sm text-red-500">Min Fou is 0</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  {" "}
+                  <ExclamationTriangleIcon />
+                  Min Fou is 0
+                </span>
               ) : (
-                <span className="text-sm text-red-500">Max Fou is 2000</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  {" "}
+                  <ExclamationTriangleIcon />
+                  Max Fou is 2000
+                </span>
               ))}
           </div>
         </div>
@@ -197,10 +224,14 @@ const ServantStatus = ({
           <div className="h-4">
             {errors.ceAtk &&
               (errors.ceAtk.type === "min" ? (
-                <span className="text-sm text-red-500">Min CE Attack is 0</span>
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  {" "}
+                  <ExclamationTriangleIcon />
+                  Min CE Attack is 0
+                </span>
               ) : (
-                <span className="text-sm text-red-500">
-                  Max CE Attack is 2400
+                <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">
+                  <ExclamationTriangleIcon /> Max CE Attack is 2400
                 </span>
               ))}
           </div>
