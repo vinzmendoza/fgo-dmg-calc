@@ -63,7 +63,7 @@ const Home: NextPage = () => {
   }, [currentLvl, servantData, setValue]);
 
   return (
-    <PageLayout>
+    <PageLayout title="Home">
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col mb-4 gap-y-4 md:grid md:grid-cols-main md:gap-x-4">
