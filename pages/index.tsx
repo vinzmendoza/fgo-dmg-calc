@@ -47,7 +47,6 @@ const Home: NextPage = () => {
     if (!servantData) return;
     const calcString = formatCalcString(data);
     const result = calcSvt(servantData, calcString);
-
     setDmgResult(result);
   };
 
@@ -55,7 +54,10 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     setValue("atk", servantData ? servantData.atkGrowth[currentLvl - 1] : 0);
-    setValue("className", servantData ? servantData.className : "");
+    setValue(
+      "className",
+      servantData ? servantData.className.replace(/[A-Z]/g, " $&").trim() : ""
+    ); //add spacing of servant class name
     setValue("servantSelected", servantData ? servantData.name : "");
     setValue("servantId", servantData ? servantData.id : "");
   }, [currentLvl, servantData, setValue]);
