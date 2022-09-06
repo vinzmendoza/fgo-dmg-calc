@@ -27,7 +27,7 @@ const Footer = () => {
         </a>
       </p>
       <p className="text-center">
-        Damage calculations courtesy of{" "}
+        Calculations and abstraction courtesy of{" "}
         <a
           href="https://www.npmjs.com/package/fgo-calc"
           target="_blank"
