@@ -17,7 +17,7 @@ ${
   data.servantId == 200100 && data.npType === ""
     ? "snp1 "
     : data.npType && data.npType + " "
-};
+}
 ${
   data.enemyDefDown > 0
     ? "d-" + data.enemyDefDown + " "
