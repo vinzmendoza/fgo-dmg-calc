@@ -310,7 +310,8 @@ const ServantStatus = ({
             <Tooltip>
               <>
                 Special Atk bonus from event modifiers or
-                <br /> trait damage &#40;ex. Kriemhild vs Chaotic enemies&#x29;
+                <br /> trait/attribute/alignment damage
+                <br /> &#x28;ex. Kriemhild vs Chaotic enemies&#x29;
               </>
             </Tooltip>
           </label>
@@ -335,7 +336,7 @@ const ServantStatus = ({
               <>
                 Extra NP dmg against
                 <br /> specific traits/attributes/alignments
-                <br /> &#40;ex. Gil&apos;s extra dmg against servants&#x29;
+                <br /> &#x28;ex. Gil&apos;s extra dmg against servants&#x29;
               </>
             </Tooltip>
           </label>
@@ -357,7 +358,13 @@ const ServantStatus = ({
           <label htmlFor="flatDmg" className="flex items-center gap-x-1">
             Flat Damage
             <Tooltip>
-              ex. Waver&apos;s third skill of increasing dmg by 500
+              <>
+                Servants with divinity passives are
+                <br /> already included in the calculation.
+                <br /> Active skills however should be manually included. <br />
+                &#x28;ex. Waver&apos;s third skill of increasing dmg by
+                500&#x29;
+              </>
             </Tooltip>
           </label>
           <input

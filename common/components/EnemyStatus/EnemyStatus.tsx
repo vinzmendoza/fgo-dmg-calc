@@ -98,7 +98,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
               alt="specialDef"
             />
           </span>
-          <Tooltip>ex. Gawain&apos;s encounter in Camelot</Tooltip>
+          <Tooltip>&#x28;ex. Gawain&apos;s encounter in Camelot&#x29;</Tooltip>
         </label>
         <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
           <input
@@ -128,8 +128,8 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
           <Tooltip>
             <>
               Flat damage cut buff of enemies <br />
-              ex. Demonic Bodhisattva&apos;s <br />
-              encounter in SE.RA.PH
+              &#x28;ex. Demonic Bodhisattva <br />
+              encounter in SE.RA.PH&#x29;
             </>
           </Tooltip>
         </label>
