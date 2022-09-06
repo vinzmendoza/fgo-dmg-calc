@@ -456,7 +456,7 @@ export const servants = [
   },
   {
     id: 92,
-    name: "Ryougi Shiki",
+    name: "Ryougi Shiki (Assassin)",
     class: "assassin",
   },
   {
@@ -591,7 +591,7 @@ export const servants = [
   },
   {
     id: 119,
-    name: "Altria Pendragon",
+    name: "Altria Pendragon (Lancer)",
     class: "lancer",
   },
   {
@@ -601,7 +601,7 @@ export const servants = [
   },
   {
     id: 121,
-    name: "Lancelot",
+    name: "Lancelot (Saber)",
     class: "saber",
   },
   {
@@ -641,17 +641,17 @@ export const servants = [
   },
   {
     id: 129,
-    name: "Altria Pendragon",
+    name: "Altria Pendragon (Archer)",
     class: "archer",
   },
   {
     id: 130,
-    name: "Marie Antoinette",
+    name: "Marie Antoinette (Caster)",
     class: "caster",
   },
   {
     id: 131,
-    name: "Anne Bonny & Mary Read",
+    name: "Anne Bonny & Mary Read (Archer)",
     class: "archer",
   },
   {
@@ -661,7 +661,7 @@ export const servants = [
   },
   {
     id: 133,
-    name: "Scáthach",
+    name: "Scáthach (Assassin)",
     class: "assassin",
   },
   {
@@ -671,7 +671,7 @@ export const servants = [
   },
   {
     id: 135,
-    name: "Martha",
+    name: "Martha (Ruler)",
     class: "ruler",
   },
   {
@@ -739,21 +739,13 @@ export const servants = [
     name: "Jaguar Warrior",
     class: "lancer",
   },
-  {
-    id: 149,
-    name: "Tiamat",
-    class: "beastII",
-  },
+
   {
     id: 150,
     name: "Merlin",
     class: "caster",
   },
-  {
-    id: 151,
-    name: "Goetia",
-    class: "beastI",
-  },
+
   {
     id: 152,
     name: "Solomon",
@@ -834,11 +826,7 @@ export const servants = [
     name: "Sessyoin Kiara",
     class: "alterEgo",
   },
-  {
-    id: 168,
-    name: "Beast III/R",
-    class: "beastIIIR",
-  },
+
   {
     id: 169,
     name: "Scheherazade",
@@ -891,7 +879,7 @@ export const servants = [
   },
   {
     id: 179,
-    name: "Altria Pendragon (Alter)",
+    name: "Altria Pendragon (Rider Alter)",
     class: "rider",
   },
   {
@@ -906,7 +894,7 @@ export const servants = [
   },
   {
     id: 182,
-    name: "Ishtar",
+    name: "Ishtar (Rider)",
     class: "rider",
   },
   {
@@ -1076,32 +1064,32 @@ export const servants = [
   },
   {
     id: 216,
-    name: "Jeanne d'Arc",
+    name: "Jeanne d'Arc (Archer)",
     class: "archer",
   },
   {
     id: 217,
-    name: "Ibaraki-Douji",
+    name: "Ibaraki-Douji (Lancer)",
     class: "lancer",
   },
   {
     id: 218,
-    name: "Ushiwakamaru",
+    name: "Ushiwakamaru (Assassin)",
     class: "assassin",
   },
   {
     id: 219,
-    name: "Jeanne d'Arc (Alter)",
+    name: "Jeanne d'Arc (Berserker Alter)",
     class: "berserker",
   },
   {
     id: 220,
-    name: "BB",
+    name: "BB (Summer)",
     class: "moonCancer",
   },
   {
     id: 221,
-    name: "Queen Medb",
+    name: "Queen Medb (Saber)",
     class: "saber",
   },
   {
@@ -1111,7 +1099,7 @@ export const servants = [
   },
   {
     id: 223,
-    name: "Diarmuid Ua Duibhne",
+    name: "Diarmuid Ua Duibhne (Saber)",
     class: "saber",
   },
   {
@@ -1195,11 +1183,6 @@ export const servants = [
     class: "assassin",
   },
   {
-    id: 240,
-    name: "Beast III/L",
-    class: "beastIIIL",
-  },
-  {
     id: 241,
     name: "Sima Yi (Reines)",
     class: "rider",
@@ -1261,7 +1244,7 @@ export const servants = [
   },
   {
     id: 253,
-    name: "Leonardo da Vinci",
+    name: "Leonardo da Vinci (Rider)",
     class: "rider",
   },
   {
@@ -1301,27 +1284,27 @@ export const servants = [
   },
   {
     id: 261,
-    name: "Miyamoto Musashi",
+    name: "Miyamoto Musashi (Berserker)",
     class: "berserker",
   },
   {
     id: 262,
-    name: "Osakabehime",
+    name: "Osakabehime (Archer)",
     class: "archer",
   },
   {
     id: 263,
-    name: "Carmilla",
+    name: "Carmilla (Rider)",
     class: "rider",
   },
   {
     id: 264,
-    name: "Katsushika Hokusai",
+    name: "Katsushika Hokusai (Saber)",
     class: "saber",
   },
   {
     id: 265,
-    name: "Altria Pendragon",
+    name: "Altria Pendragon (Ruler)",
     class: "ruler",
   },
   {
@@ -1331,7 +1314,7 @@ export const servants = [
   },
   {
     id: 267,
-    name: "Okita Souji",
+    name: "Okita Souji (Assassin)",
     class: "assassin",
   },
   {
@@ -1346,7 +1329,7 @@ export const servants = [
   },
   {
     id: 270,
-    name: "Astolfo",
+    name: "Astolfo (Saber)",
     class: "saber",
   },
   {
@@ -1421,17 +1404,17 @@ export const servants = [
   },
   {
     id: 285,
-    name: "Sessyoin Kiara",
+    name: "Sessyoin Kiara (Moon Cancer)",
     class: "moonCancer",
   },
   {
     id: 286,
-    name: "Illyasviel von Einzbern",
+    name: "Illyasviel von Einzbern (Archer)",
     class: "archer",
   },
   {
     id: 287,
-    name: "Brynhild",
+    name: "Brynhild (Berserker)",
     class: "berserker",
   },
   {
@@ -1446,12 +1429,12 @@ export const servants = [
   },
   {
     id: 290,
-    name: "Tomoe Gozen",
+    name: "Tomoe Gozen (Saber)",
     class: "saber",
   },
   {
     id: 291,
-    name: "Murasaki Shikibu",
+    name: "Murasaki Shikibu (Rider)",
     class: "rider",
   },
   {
@@ -1581,7 +1564,7 @@ export const servants = [
   },
   {
     id: 317,
-    name: "Okita Souji (Alter)",
+    name: "Okita Souji (Saber   Alter)",
     class: "saber",
   },
   {
@@ -1591,17 +1574,17 @@ export const servants = [
   },
   {
     id: 319,
-    name: "Charlotte Corday",
+    name: "Charlotte Corday (Caster)",
     class: "caster",
   },
   {
     id: 320,
-    name: "Leonardo da Vinci",
+    name: "Leonardo da Vinci (Ruler)",
     class: "ruler",
   },
   {
     id: 321,
-    name: "Kama",
+    name: "Kama (Avenger)",
     class: "avenger",
   },
   {
@@ -1641,7 +1624,7 @@ export const servants = [
   },
   {
     id: 329,
-    name: "Sakamoto Ryouma",
+    name: "Sakamoto Ryouma (Lancer)",
     class: "lancer",
   },
   {
@@ -1659,11 +1642,7 @@ export const servants = [
     name: "Dobrynya Nikitich",
     class: "rider",
   },
-  {
-    id: 333,
-    name: "Beast IV",
-    class: "beastIV",
-  },
+
   {
     id: 334,
     name: "Koyanskaya of Darkness",
@@ -1726,7 +1705,7 @@ export const servants = [
   },
   {
     id: 346,
-    name: "James Moriarty",
+    name: "James Moriarty (Ruler)",
     class: "ruler",
   },
   {
@@ -1772,17 +1751,17 @@ export const servants = [
   },
   {
     id: 355,
-    name: "Ibuki-Douji",
+    name: "Ibuki-Douji (Berserker)",
     class: "berserker",
   },
   {
     id: 356,
-    name: "Utsumi Erice",
+    name: "Utsumi Erice (Avenger)",
     class: "avenger",
   },
   {
     id: 357,
-    name: "Scáthach-Skadi",
+    name: "Scáthach-Skadi (Ruler)",
     class: "ruler",
   },
   {
