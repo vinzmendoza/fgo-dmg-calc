@@ -9,10 +9,11 @@ type ComponentProps = {
 };
 
 const PageLayout = ({ children, title }: ComponentProps) => {
+  const pageTitle = title + " - FGO NP Damage Calculator";
   return (
     <div className="flex flex-col h-full max-w-5xl px-4 mx-auto">
       <Head>
-        <title>{title} - FGO NP Damage Calculator</title>
+        <title>{pageTitle}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
