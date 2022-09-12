@@ -9,8 +9,13 @@ export const enemyClasses: enemyClass[] = [
   { name: "Assassin", value: "assassin" },
   { name: "Berserker", value: "berserker" },
   { name: "Ruler", value: "ruler" },
+  { name: "Avenger", value: "avenger" },
   { name: "Alter Ego", value: "alterEgo" },
   { name: "Moon Cancer", value: "moonCancer" },
   { name: "Foreigner", value: "foreigner" },
   { name: "Pretender", value: "pretender" },
+  { name: "Beast I", value: "beastI" },
+  { name: "Beast II", value: "beastII" },
+  { name: "Beast III L", value: "beastIIIL" },
+  { name: "Beast III R", value: "beastIIIR" },
 ];
