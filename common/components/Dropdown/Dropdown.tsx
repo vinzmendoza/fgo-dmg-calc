@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { CaretDownIcon, CaretUpIcon } from "@radix-ui/react-icons";
+import { CaretDownIcon } from "@radix-ui/react-icons";
 
 import { enemyClass, enemyAttribute } from "../../utils/interface";
 import useDropdown from "../../hooks/useDropdown";
@@ -54,15 +54,21 @@ const Dropdown = ({
         </label>
         <button
           aria-label="toggle menu"
-          className={`flex items-center justify-between p-2 mb-1 bg-white border rounded focus:outline focus:outline-2 ${
-            isOpen && "outline outline-2"
+          className={`flex items-center justify-between bg-white p-2 mb-1 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 dark:bg-zinc-900/80 ${
+            isOpen
+              ? "ring-2 ring-blue-500 border-transparent dark:border-transparent transition ease-in duration-200"
+              : "focus:ring-blue-500 focus:border-transparent dark:border-zinc-600 dark:focus:border-transparent"
           }`}
           type="button"
           {...getToggleButtonProps()}
         >
           <span>{selectedItem ? selectedItem.name : placeholder}</span>
           <span className="px-2">
-            {isOpen ? <CaretUpIcon /> : <CaretDownIcon />}
+            <CaretDownIcon
+              className={`transition ease-in-out duration-200 ${
+                isOpen && "rotate-180"
+              }`}
+            />
           </span>
         </button>
       </div>
@@ -70,7 +76,7 @@ const Dropdown = ({
         {...getMenuProps()}
         className={`${
           !isOpen && "hidden"
-        } absolute mt-2 overflow-y-auto border rounded bg-neutral-50 max-h-64 w-full shadow-lg z-50 ${
+        } absolute mt-2 overflow-y-auto border rounded bg-zinc-50 max-h-64 w-full shadow-lg z-50 dark:bg-zinc-700 dark:border-transparent ${
           isOpen && "outline-none"
         } `}
       >
@@ -81,10 +87,10 @@ const Dropdown = ({
               ${
                 highlightedIndex === index &&
                 selectedItem !== item &&
-                "bg-blue-100 "
+                "bg-blue-100 dark:bg-zinc-600"
               }
               ${
-                selectedItem === item && "bg-blue-300 "
+                selectedItem === item && "bg-blue-500 text-zinc-100 font-bold"
               } py-2 px-2 cursor-pointer
              `}
               key={`${item.value}${index}`}

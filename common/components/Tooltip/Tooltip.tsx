@@ -14,9 +14,9 @@ const Tooltip = ({ children }: ComponentProps) => (
         </button>
       </TooltipPrimitive.Trigger>
       <TooltipPrimitive.Portal>
-        <TooltipPrimitive.Content className="p-2 text-sm text-center rounded shadow bg-neutral-200 animate-fadeIn">
+        <TooltipPrimitive.Content className="p-2 text-sm text-center rounded shadow-lg bg-zinc-300 animate-fadeIn dark:bg-zinc-700">
           {children}
-          <TooltipPrimitive.Arrow className=" fill-neutral-200" />
+          <TooltipPrimitive.Arrow className="fill-zinc-300 dark:fill-zinc-700" />
         </TooltipPrimitive.Content>
       </TooltipPrimitive.Portal>
     </TooltipPrimitive.Root>

@@ -26,7 +26,7 @@ const Results = ({
   }, [isReset, setIsReset, setDmgResult]);
 
   return (
-    <div className="flex flex-col gap-4 p-4 border rounded md:grid md:grid-cols-3 bg-neutral-50">
+    <div className="flex flex-col gap-4 p-4 border rounded md:grid md:grid-cols-3 bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-800">
       <div className="flex flex-col gap-1">
         <h3>Min Damage:</h3>
         <input
@@ -40,7 +40,7 @@ const Results = ({
               : 0
           }
           disabled
-          className="w-full p-2 font-bold border rounded"
+          className="w-full p-2 font-bold border rounded cursor-not-allowed dark:bg-zinc-800 dark:border-zinc-600"
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -54,7 +54,7 @@ const Results = ({
               : 0
           }
           disabled
-          className="w-full p-2 font-bold border rounded"
+          className="w-full p-2 font-bold border rounded cursor-not-allowed dark:bg-zinc-800 dark:border-zinc-600"
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -70,7 +70,7 @@ const Results = ({
               : 0
           }
           disabled
-          className="w-full p-2 font-bold border rounded"
+          className="w-full p-2 font-bold border rounded cursor-not-allowed dark:bg-zinc-800 dark:border-zinc-600"
         />
       </div>
     </div>

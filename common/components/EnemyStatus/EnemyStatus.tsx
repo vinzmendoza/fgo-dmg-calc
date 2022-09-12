@@ -20,7 +20,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
   } = useFormContext();
 
   return (
-    <div className="flex flex-col gap-4 p-4 border rounded bg-neutral-50">
+    <div className="flex flex-col gap-4 p-4 border rounded bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-800">
       <h2 className="text-xl font-bold text-center">Enemy Status</h2>
 
       <div className="flex flex-col gap-1">
@@ -35,14 +35,14 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
             />
           </span>
         </label>
-        <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+        <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
           <input
-            className="w-full p-2 border rounded-l focus:outline-none"
+            className="w-full p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
             id="enemyDefDown"
             type="number"
             {...register("enemyDefDown")}
           />
-          <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+          <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
             %
           </span>
         </div>
@@ -73,14 +73,14 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
             />
           </span>
         </label>
-        <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+        <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
           <input
-            className="w-full p-2 border rounded-l focus:outline-none"
+            className="w-full p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
             id="enemyCardResDown"
             type="number"
             {...register("enemyCardResDown")}
           />
-          <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+          <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
             %
           </span>
         </div>
@@ -100,14 +100,14 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
           </span>
           <Tooltip>&#x28;ex. Gawain&apos;s encounter in Camelot&#x29;</Tooltip>
         </label>
-        <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+        <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
           <input
-            className="w-full p-2 border rounded-l focus:outline-none"
+            className="w-full p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
             id="enemySpecialRes"
             type="number"
             {...register("enemySpecialRes")}
           />
-          <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+          <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
             %
           </span>
         </div>
@@ -134,7 +134,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
           </Tooltip>
         </label>
         <input
-          className="w-full p-2 border rounded focus:outline-2 focus:outline"
+          className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 focus:ring-blue-500 focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
           id="enemyDmgCut"
           type="number"
           {...register("enemyDmgCut")}
@@ -158,7 +158,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
             tooltip={
               <>
                 If no attribute is selected, calculation will be based on
-                <br /> the attribute the selected servant is neutral to
+                <br /> a neutral/equal &#x28;x1&#x29; advantage
               </>
             }
           />
@@ -181,7 +181,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
             tooltip={
               <>
                 If no class is selected, calculation will be based on
-                <br /> the class the selected servant is neutral to
+                <br /> a neutral/equal &#x28;x1&#x29; advantage
               </>
             }
           />

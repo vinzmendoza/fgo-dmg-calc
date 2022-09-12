@@ -88,7 +88,7 @@ const Home: NextPage = () => {
               <div className="flex flex-row justify-between gap-x-4">
                 <button
                   type="button"
-                  className="w-full px-4 py-2 border rounded border-neutral-600 hover:bg-neutral-600 hover:text-neutral-100"
+                  className="w-full px-4 py-2 transition duration-200 ease-in-out border rounded border-neutral-600 hover:bg-neutral-700 hover:text-neutral-100 active:bg-neutral-800 active:text-neutral-100"
                   onClick={() => {
                     setIsReset(true);
                     reset();
@@ -99,9 +99,9 @@ const Home: NextPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-4 py-2 bg-blue-600 rounded text-neutral-100 hover:bg-blue-500"
+                  className="w-full px-4 py-2 transition duration-200 ease-in-out bg-blue-600 rounded text-neutral-100 hover:bg-blue-700 active:bg-blue-800"
                 >
-                  Submit
+                  Calculate
                 </button>
               </div>
             </div>

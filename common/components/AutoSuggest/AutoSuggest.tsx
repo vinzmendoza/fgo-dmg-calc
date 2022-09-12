@@ -64,11 +64,12 @@ const AutoSuggest = ({
         </label>
         <div className="" {...getComboboxProps()}>
           <input
-            className={`w-full p-2 border rounded ${
+            className={`w-full p-2 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 dark:bg-zinc-900/70 dark:focus:bg-zinc-900 ${
               errors.autoSuggest &&
-              (servantWatched === undefined || servantWatched === "") &&
-              "border-red-500 focus:border-inherit"
-            }  focus:outline-2 focus:outline`}
+              (servantWatched === undefined || servantWatched === "")
+                ? "ring-1 ring-red-500 border-transparent"
+                : "focus:ring-blue-500 focus:border-transparent dark:border-zinc-600 dark:focus:border-transparent"
+            }`}
             {...getInputProps()}
             placeholder="Search"
           />
@@ -78,7 +79,7 @@ const AutoSuggest = ({
         {...getMenuProps()}
         className={`${
           (suggestions === undefined || !isOpen) && "hidden"
-        } absolute mt-2 overflow-y-auto border rounded bg-neutral-50 max-h-64 w-full shadow-lg`}
+        } absolute mt-2 overflow-y-auto border rounded bg-zinc-50 max-h-72 w-full shadow-lg dark:bg-zinc-700 dark:border-transparent`}
       >
         {suggestions?.length === 0 && <li className="p-2">No matches found</li>}
         {isOpen &&
@@ -88,10 +89,10 @@ const AutoSuggest = ({
              ${
                highlightedIndex === index &&
                selectedItem !== item &&
-               "bg-blue-100 "
+               "bg-blue-100 dark:bg-zinc-600"
              }
              ${
-               selectedItem === item && "bg-blue-300 font-bold"
+               selectedItem === item && "bg-blue-500 text-zinc-100 font-bold"
              } p-2 cursor-pointer
             `}
               key={`${item.name}${index}`}
@@ -101,7 +102,7 @@ const AutoSuggest = ({
             </li>
           ))}
       </ul>
-      <div className="h-4">
+      <div className="h-4 mt-1">
         {errors.autoSuggest?.type === "checkServantSelected" &&
           (servantWatched === undefined || servantWatched === "") && (
             <span className="flex flex-row items-center text-sm text-red-500 gap-x-1">

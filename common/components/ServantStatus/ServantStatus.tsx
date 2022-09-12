@@ -43,14 +43,14 @@ const ServantStatus = ({
   const selectedNPType = watch("npType");
 
   return (
-    <div className="p-4 border rounded bg-neutral-50">
+    <div className="p-4 border rounded bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-800">
       <h2 className="mb-4 text-xl font-bold text-center">Servant Status</h2>
       <div className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 ">
         <div className="relative flex items-center justify-center md:order-last">
           <NextImage
             alt="servant-img"
-            height={135}
-            width={135}
+            height={128}
+            width={128}
             src={finalAsc ? finalAsc : "/blank.png"}
           />
         </div>
@@ -77,7 +77,7 @@ const ServantStatus = ({
             <div className="flex flex-col gap-1">
               <label htmlFor="servantSelected">Servant Selected</label>
               <input
-                className="p-2 capitalize border rounded"
+                className="p-2 capitalize border rounded cursor-not-allowed dark:bg-zinc-800 dark:border-zinc-600"
                 disabled={true}
                 id="servantSelected"
                 required={true}
@@ -89,7 +89,7 @@ const ServantStatus = ({
             <div className="flex flex-col gap-1">
               <label htmlFor="className">Class</label>
               <input
-                className="p-2 capitalize border rounded"
+                className="p-2 capitalize border rounded cursor-not-allowed dark:bg-zinc-800 dark:border-zinc-600"
                 disabled={true}
                 id="class"
                 required={true}
@@ -102,11 +102,11 @@ const ServantStatus = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 mt-5 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 ">
+      <div className="flex flex-col gap-4 mt-4 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 ">
         <div className="flex flex-col gap-1">
           <label htmlFor="atk">Attack</label>
           <input
-            className="p-2 border rounded"
+            className="p-2 border rounded cursor-not-allowed dark:bg-zinc-800 dark:border-zinc-600"
             disabled={true}
             id="atk"
             type="number"
@@ -115,14 +115,16 @@ const ServantStatus = ({
           <div className="h-4"></div>
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 ">
           <label htmlFor="lvl" className="after:content-['_*']">
             Level
           </label>
           <input
-            className={`p-2 border rounded ${
-              errors.lvl && "border-red-500 focus:border-inherit"
-            }  focus:outline-2 focus:outline`}
+            className={`p-2 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 dark:bg-zinc-900/80 ${
+              errors.lvl
+                ? "ring-1 ring-red-500 border-transparent"
+                : "focus:ring-blue-500 focus:border-transparent dark:border-zinc-600 dark:focus:border-transparent"
+            }`}
             id="lvl"
             type="number"
             {...register("lvl", { min: 1, max: 120, required: true })}
@@ -153,9 +155,11 @@ const ServantStatus = ({
             NP Level
           </label>
           <input
-            className={`p-2 border rounded ${
-              errors.npLvl && "border-red-500 focus:border-inherit"
-            }  focus:outline-2 focus:outline`}
+            className={`p-2 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 dark:bg-zinc-900/80 ${
+              errors.npLvl
+                ? "ring-1 ring-red-500 border-transparent"
+                : "focus:ring-blue-500 focus:border-transparent dark:border-zinc-600 dark:focus:border-transparent"
+            }`}
             id="npLvl"
             type="number"
             {...register("npLvl", { required: true, min: 1, max: 5 })}
@@ -186,9 +190,11 @@ const ServantStatus = ({
         <div className="flex flex-col gap-1">
           <label htmlFor="fou">Fou</label>
           <input
-            className={`p-2 border rounded ${
-              errors.fou && "border-red-500 focus:border-inherit"
-            }  focus:outline-2 focus:outline`}
+            className={`p-2 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 dark:bg-zinc-900/80 ${
+              errors.fou
+                ? "ring-1 ring-red-500 border-transparent"
+                : "focus:ring-blue-500 focus:border-transparent dark:border-zinc-600 dark:focus:border-transparent"
+            }`}
             id="fou"
             type="number"
             {...register("fou", { min: 0, max: 2000 })}
@@ -214,9 +220,11 @@ const ServantStatus = ({
         <div className="flex flex-col gap-1">
           <label htmlFor="ceAtk">Craft Essence Attack</label>
           <input
-            className={`p-2 border rounded ${
-              errors.ceAtk && "border-red-500 focus:border-inherit"
-            } focus:outline-2 focus:outline`}
+            className={`p-2 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 dark:bg-zinc-900/80 ${
+              errors.ceAtk
+                ? "ring-1 ring-red-500 border-transparent"
+                : "focus:ring-blue-500 focus:border-transparent dark:border-zinc-600 dark:focus:border-transparent"
+            }`}
             id="ceAtk"
             type="number"
             {...register("ceAtk", { min: 0, max: 2400 })}
@@ -249,14 +257,15 @@ const ServantStatus = ({
               />
             </span>
           </label>
-          <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+
+          <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
             <input
-              className="p-2 border rounded-l focus:outline-none"
+              className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="atkMod"
               type="number"
               {...register("atkMod")}
             />
-            <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+            <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
               %
             </span>
           </div>
@@ -287,14 +296,14 @@ const ServantStatus = ({
               />
             </span>
           </label>
-          <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+          <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
             <input
-              className="p-2 border rounded-l focus:outline-none"
+              className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="cardMod"
               type="number"
               {...register("cardMod")}
             />
-            <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+            <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
               %
             </span>
           </div>
@@ -313,14 +322,14 @@ const ServantStatus = ({
               />
             </span>
           </label>
-          <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+          <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
             <input
-              className="p-2 border rounded-l focus:outline-none"
+              className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="npDmgBuff"
               type="number"
               {...register("npDmgBuff")}
             />
-            <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+            <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
               %
             </span>
           </div>
@@ -340,20 +349,21 @@ const ServantStatus = ({
             </span>
             <Tooltip>
               <>
-                Special Atk bonus from event modifiers or
+                Special attack bonus from event modifiers or
                 <br /> trait/attribute/alignment damage
-                <br /> &#x28;ex. Kriemhild vs Chaotic enemies&#x29;
+                <br /> &#x28;ex. Kriemhild&apos;s 2nd skill vs Chaotic
+                enemies&#x29;
               </>
             </Tooltip>
           </label>
-          <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+          <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
             <input
-              className="p-2 border rounded-l focus:outline-none"
+              className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="powerMod"
               type="number"
               {...register("powerMod")}
             />
-            <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+            <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
               %
             </span>
           </div>
@@ -365,20 +375,21 @@ const ServantStatus = ({
             NP Extra Damage Modifier
             <Tooltip>
               <>
-                Extra NP dmg against
-                <br /> specific traits/attributes/alignments
-                <br /> &#x28;ex. Gil&apos;s extra dmg against servants&#x29;
+                Extra NP damage against
+                <br /> specific trait/attribute/alignment
+                <br /> &#x28;ex. Gil&apos;s NP with extra damage against
+                servants&#x29;
               </>
             </Tooltip>
           </label>
-          <div className="grid rounded grid-cols-input focus-within:outline-2 focus-within:outline">
+          <div className="grid rounded grid-cols-input focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent focus-within:transition focus-within:ease-in focus-within:duration-200">
             <input
-              className="p-2 border rounded-l focus:outline-none"
+              className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="npExtraDmgMod"
               type="number"
               {...register("npExtraDmgMod")}
             />
-            <span className="flex items-center justify-center rounded-r text-neutral-600 bg-neutral-200">
+            <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
               %
             </span>
           </div>
@@ -393,13 +404,13 @@ const ServantStatus = ({
                 Servants with divinity passives are
                 <br /> already included in the calculation.
                 <br /> Active skills however should be manually included. <br />
-                &#x28;ex. Waver&apos;s third skill of increasing dmg by
+                &#x28;ex. Waver&apos;s third skill of increasing damage by
                 500&#x29;
               </>
             </Tooltip>
           </label>
           <input
-            className="p-2 border rounded focus:outline-2 focus:outline"
+            className="p-2 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 focus:ring-blue-500 focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
             id="flatDmg"
             type="number"
             {...register("flatDmg")}

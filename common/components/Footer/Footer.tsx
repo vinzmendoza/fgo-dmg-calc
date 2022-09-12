@@ -9,11 +9,13 @@ const Footer = () => {
           href="https://github.com/vinzmendoza"
           target="_blank"
           rel="noreferrer"
-          className="text-blue-500 hover:text-blue-700"
+          className="text-blue-500 transition duration-200 ease-in-out hover:text-blue-700"
         >
           Vinz
         </a>{" "}
-        <span className="text-neutral-600">&#x28;Vinz#0775&#x29;</span>
+        <span className="text-zinc-600 dark:text-zinc-500">
+          &#x28;Vinz#0775&#x29;
+        </span>
       </p>
       <p className="text-center">
         Data sourced from{" "}
@@ -21,7 +23,7 @@ const Footer = () => {
           href="https://apps.atlasacademy.io/db/"
           target="_blank"
           rel="noreferrer"
-          className="text-blue-500 hover:text-blue-700"
+          className="text-blue-500 transition duration-200 ease-in-out hover:text-blue-700"
         >
           Atlas Academy
         </a>
@@ -32,7 +34,7 @@ const Footer = () => {
           href="https://www.npmjs.com/package/fgo-calc"
           target="_blank"
           rel="noreferrer"
-          className="text-blue-500 hover:text-blue-700"
+          className="text-blue-500 transition duration-200 ease-in-out hover:text-blue-700"
         >
           fgo-calc
         </a>
@@ -43,7 +45,7 @@ const Footer = () => {
           href="https://maketakunai.github.io/"
           target="_blank"
           rel="noreferrer"
-          className="text-blue-500 hover:text-blue-700"
+          className="text-blue-500 transition duration-200 ease-in-out hover:text-blue-700"
         >
           maketakunai
         </a>
@@ -52,7 +54,7 @@ const Footer = () => {
           href="https://keinoda.github.io/fgocalc/"
           target="_blank"
           rel="noreferrer"
-          className="text-blue-500 hover:text-blue-700"
+          className="text-blue-500 transition duration-200 ease-in-out hover:text-blue-700"
         >
           keinoda
         </a>
