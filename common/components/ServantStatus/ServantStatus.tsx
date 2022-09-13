@@ -60,8 +60,8 @@ const ServantStatus = ({
           {isLoading ? (
             <NextImage
               alt="fou-loading"
-              height={90}
-              width={90}
+              height={128}
+              width={128}
               src="/LoadingFou/loading.gif"
               className={resolvedTheme === "dark" ? "" : "brightness-75"}
             />
