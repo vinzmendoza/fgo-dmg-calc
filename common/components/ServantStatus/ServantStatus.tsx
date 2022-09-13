@@ -8,18 +8,23 @@ import { ServantNpType } from "./ServantNpType";
 import { FormValues } from "../../utils/interface";
 import { Tooltip } from "../Tooltip";
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import { useTheme } from "next-themes";
 
 type ComponentProps = {
-  servantData: Servant.Servant | Enemy.Enemy | undefined;
   callback: (e: Servant.Servant | Enemy.Enemy | undefined) => void;
+  isLoading: boolean;
   isReset: boolean;
+  servantData: Servant.Servant | Enemy.Enemy | undefined;
+  setIsLoading: (val: boolean) => void;
   setIsReset: (val: boolean) => void;
 };
 
 const ServantStatus = ({
-  servantData,
   callback,
+  isLoading,
   isReset,
+  servantData,
+  setIsLoading,
   setIsReset,
 }: ComponentProps) => {
   const {
@@ -31,8 +36,13 @@ const ServantStatus = ({
   } = useFormContext<FormValues>();
 
   useEffect(() => {
-    if (servantData) setValue("npType", "");
-  }, [servantData, setValue, watch]);
+    if (servantData) {
+      setValue("npType", "");
+      setIsLoading(false);
+    }
+  }, [servantData, setValue, watch, setIsLoading]);
+
+  const { resolvedTheme } = useTheme();
 
   let finalAsc;
   const images = servantData?.extraAssets.faces.ascension;
@@ -47,12 +57,22 @@ const ServantStatus = ({
       <h2 className="mb-4 text-xl font-bold text-center">Servant Status</h2>
       <div className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 ">
         <div className="relative flex items-center justify-center md:order-last">
-          <NextImage
-            alt="servant-img"
-            height={128}
-            width={128}
-            src={finalAsc ? finalAsc : "/blank.png"}
-          />
+          {isLoading ? (
+            <NextImage
+              alt="fou-loading"
+              height={90}
+              width={90}
+              src="/LoadingFou/loading.gif"
+              className={resolvedTheme === "dark" ? "" : "brightness-75"}
+            />
+          ) : (
+            <NextImage
+              alt="servant-img"
+              height={128}
+              width={128}
+              src={finalAsc ? finalAsc : "/blank.png"}
+            />
+          )}
         </div>
         <div className="flex flex-col w-full gap-y-4 lg:col-span-2 md:col-auto">
           <Controller
@@ -70,6 +90,7 @@ const ServantStatus = ({
                 callback={callback}
                 isReset={isReset}
                 setIsReset={setIsReset}
+                setIsLoading={setIsLoading}
               />
             )}
           />

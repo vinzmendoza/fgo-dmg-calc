@@ -12,7 +12,8 @@ const useAutoSuggest = (
   value: string,
   onChange: (e: string | undefined) => void,
   isReset: boolean,
-  setIsReset: (val: boolean) => void
+  setIsReset: (val: boolean) => void,
+  setIsLoading: (val: boolean) => void
 ) => {
   const [selectedServant, setSelectedServant] = useState<
     Servant.Servant | Enemy.Enemy
@@ -63,7 +64,9 @@ const useAutoSuggest = (
     },
     onSelectedItemChange: async ({ selectedItem }) => {
       if (!selectedItem) return;
+
       try {
+        setIsLoading(true);
         const data = await apiConnector.servant(
           selectedItem?.id,
           false,

@@ -39,8 +39,14 @@ const Home: NextPage = () => {
   const methods = useForm<FormValues>({ defaultValues });
   const { handleSubmit, reset, setValue, watch } = methods;
 
-  const { servantData, setServantData, isReset, setIsReset } =
-    useCurrentServant();
+  const {
+    servantData,
+    setServantData,
+    isReset,
+    setIsReset,
+    isLoading,
+    setIsLoading,
+  } = useCurrentServant();
   const { dmgResult, setDmgResult } = useResults();
 
   const onSubmit: SubmitHandler<FormValues> = (data: FormValues) => {
@@ -72,6 +78,8 @@ const Home: NextPage = () => {
               callback={setServantData}
               isReset={isReset}
               setIsReset={setIsReset}
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
             />
             <EnemyStatus isReset={isReset} setIsReset={setIsReset} />
           </div>

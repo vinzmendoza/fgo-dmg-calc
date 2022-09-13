@@ -12,6 +12,7 @@ type AppProps = {
   callback: (e: Servant.Servant | Enemy.Enemy | undefined) => void;
   isReset: boolean;
   setIsReset: (val: boolean) => void;
+  setIsLoading: (val: boolean) => void;
 };
 
 const AutoSuggest = ({
@@ -20,6 +21,7 @@ const AutoSuggest = ({
   callback,
   isReset,
   setIsReset,
+  setIsLoading,
 }: AppProps) => {
   const {
     error,
@@ -33,7 +35,7 @@ const AutoSuggest = ({
     selectedItem,
     selectedServant,
     suggestions,
-  } = useAutoSuggest(value, onChange, isReset, setIsReset);
+  } = useAutoSuggest(value, onChange, isReset, setIsReset, setIsLoading);
 
   const {
     formState: { errors },
