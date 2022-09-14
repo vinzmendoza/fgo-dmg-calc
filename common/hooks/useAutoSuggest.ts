@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Enemy, Servant } from "@atlasacademy/api-connector";
+import { Enemy, NoblePhantasm, Servant } from "@atlasacademy/api-connector";
 import { useQuery } from "@tanstack/react-query";
 import { useCombobox } from "downshift";
 
@@ -20,6 +20,8 @@ const useAutoSuggest = (
   >();
 
   const debouncedInput = useDebounce(value, 500);
+
+  let bazettNP: NoblePhantasm.NoblePhantasm;
 
   const suggestServant = async () => {
     const servantList = servants.filter((servant) =>
@@ -72,6 +74,15 @@ const useAutoSuggest = (
           false,
           cacheDuration
         );
+
+        if (data.collectionNo === 336) {
+          if (!bazettNP) {
+            bazettNP = await apiConnector.noblePhantasm(1001150);
+          }
+
+          data.noblePhantasms = [bazettNP];
+        }
+
         setSelectedServant(data);
       } catch (err) {
         return;
