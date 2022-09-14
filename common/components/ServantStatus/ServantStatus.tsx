@@ -284,6 +284,7 @@ const ServantStatus = ({
               className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="atkMod"
               type="number"
+              step="any"
               {...register("atkMod")}
             />
             <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
@@ -322,6 +323,7 @@ const ServantStatus = ({
               className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="cardMod"
               type="number"
+              step="any"
               {...register("cardMod")}
             />
             <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
@@ -348,6 +350,7 @@ const ServantStatus = ({
               className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="npDmgBuff"
               type="number"
+              step="any"
               {...register("npDmgBuff")}
             />
             <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
@@ -382,6 +385,7 @@ const ServantStatus = ({
               className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="powerMod"
               type="number"
+              step="any"
               {...register("powerMod")}
             />
             <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
@@ -408,6 +412,7 @@ const ServantStatus = ({
               className="p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
               id="npExtraDmgMod"
               type="number"
+              step="any"
               {...register("npExtraDmgMod")}
             />
             <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">

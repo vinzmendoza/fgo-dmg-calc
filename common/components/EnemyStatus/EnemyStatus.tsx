@@ -40,6 +40,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
             className="w-full p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
             id="enemyDefDown"
             type="number"
+            step="any"
             {...register("enemyDefDown")}
           />
           <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
@@ -78,6 +79,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
             className="w-full p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
             id="enemyCardResDown"
             type="number"
+            step="any"
             {...register("enemyCardResDown")}
           />
           <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
@@ -105,6 +107,7 @@ const EnemyStatus = ({ isReset, setIsReset }: ComponentProps) => {
             className="w-full p-2 border-l rounded-l border-y focus:outline-none focus:border-transparent dark:bg-zinc-900/80 dark:border-zinc-600 dark:focus:border-transparent"
             id="enemySpecialRes"
             type="number"
+            step="any"
             {...register("enemySpecialRes")}
           />
           <span className="flex items-center justify-center rounded-r text-zinc-600 bg-zinc-200 dark:bg-zinc-600 dark:text-zinc-100">
