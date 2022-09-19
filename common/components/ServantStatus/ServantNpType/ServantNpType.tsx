@@ -19,7 +19,7 @@ const ServantNpType = ({ servantData, selectedNPType }: ComponentProps) => {
     <div className="flex flex-col gap-1 mb-8 h-14 md:mb-0">
       <p className="flex items-center cursor-default gap-x-1">
         NP Type{" "}
-        <Tooltip>
+        <Tooltip ariaLabel="npType">
           <>
             When nothing is selected, it will use
             <br /> the latest default NP of the servant

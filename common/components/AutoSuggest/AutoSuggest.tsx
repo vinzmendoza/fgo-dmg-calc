@@ -56,7 +56,7 @@ const AutoSuggest = ({
           {...getLabelProps()}
         >
           Name
-          <Tooltip>
+          <Tooltip ariaLabel="auto-suggest">
             <>
               Type atleast 2 character combinations
               <br /> to trigger the auto-suggest

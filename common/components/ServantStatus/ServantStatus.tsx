@@ -112,7 +112,7 @@ const ServantStatus = ({
               <input
                 className="p-2 capitalize border rounded cursor-not-allowed dark:bg-zinc-800 dark:border-zinc-600"
                 disabled={true}
-                id="class"
+                id="className"
                 required={true}
                 type="string"
                 {...register("className")}
@@ -371,7 +371,7 @@ const ServantStatus = ({
                 alt="spDmgUp"
               />
             </span>
-            <Tooltip>
+            <Tooltip ariaLabel="powerMod">
               <>
                 Special attack bonus from event modifiers or
                 <br /> trait/attribute/alignment damage
@@ -398,7 +398,7 @@ const ServantStatus = ({
         <div className="flex flex-col gap-1">
           <label htmlFor="npExtraDmgMod" className="flex items-center gap-x-1">
             NP Extra Damage Modifier
-            <Tooltip>
+            <Tooltip ariaLabel="npExtraDmgMod">
               <>
                 Extra NP damage against
                 <br /> specific trait/attribute/alignment
@@ -425,7 +425,7 @@ const ServantStatus = ({
         <div className="flex flex-col gap-1">
           <label htmlFor="flatDmg" className="flex items-center gap-x-1">
             Flat Damage
-            <Tooltip>
+            <Tooltip ariaLabel="flatDmg">
               <>
                 Servants with divinity passives are
                 <br /> already included in the calculation.

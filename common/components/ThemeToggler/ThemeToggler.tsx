@@ -18,6 +18,7 @@ const ThemeToggler = () => {
   if (!mounted)
     return (
       <button
+        aria-label="theme-toggler"
         type="button"
         onClick={handleToggleTheme}
         className="flex items-center w-[36px] h-[36px] p-2 border rounded hover:bg-zinc-200 dark:hover:bg-zinc-800 transition ease-in-out duration-200"
@@ -26,6 +27,7 @@ const ThemeToggler = () => {
 
   return (
     <button
+      aria-label="theme-toggler"
       type="button"
       onClick={handleToggleTheme}
       className="flex items-center p-2 transition duration-200 ease-in-out border rounded border-zinc-600 hover:bg-zinc-900 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900"

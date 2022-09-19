@@ -28,8 +28,9 @@ const Results = ({
   return (
     <div className="flex flex-col gap-4 p-4 border rounded md:grid md:grid-cols-3 bg-zinc-100 dark:bg-zinc-800 dark:border-zinc-800">
       <div className="flex flex-col gap-1">
-        <h3>Min Damage:</h3>
+        <label htmlFor="minRoll">Min Damage:</label>
         <input
+          id="minRoll"
           name="minRoll"
           type="string"
           value={
@@ -44,8 +45,9 @@ const Results = ({
         />
       </div>
       <div className="flex flex-col gap-1">
-        <h3>Average Damage: </h3>
+        <label htmlFor="averageRoll">Average Damage: </label>
         <input
+          id="averageRoll"
           name="averageRoll"
           type="string"
           value={
@@ -58,8 +60,9 @@ const Results = ({
         />
       </div>
       <div className="flex flex-col gap-1">
-        <h3>Max Damage: </h3>
+        <label htmlFor="maxRoll">Max Damage: </label>
         <input
+          id="maxRoll"
           name="maxRoll"
           type="string"
           value={

@@ -3,13 +3,18 @@ import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 type ComponentProps = {
   children: string | JSX.Element;
+  ariaLabel: string | undefined;
 };
 
-const Tooltip = ({ children }: ComponentProps) => (
+const Tooltip = ({ children, ariaLabel }: ComponentProps) => (
   <TooltipPrimitive.Provider delayDuration={300}>
     <TooltipPrimitive.Root>
       <TooltipPrimitive.Trigger asChild className="">
-        <button type="button" className="focus:outline-none">
+        <button
+          type="button"
+          className="focus:outline-none"
+          aria-label={ariaLabel}
+        >
           <InfoCircledIcon />
         </button>
       </TooltipPrimitive.Trigger>

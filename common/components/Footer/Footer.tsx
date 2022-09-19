@@ -13,7 +13,7 @@ const Footer = () => {
         >
           Vinz
         </a>{" "}
-        <span className="text-zinc-600 dark:text-zinc-500">
+        <span className="text-zinc-600 dark:text-zinc-400">
           &#x28;Vinz#0775&#x29;
         </span>
       </p>

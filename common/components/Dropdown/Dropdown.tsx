@@ -50,10 +50,10 @@ const Dropdown = ({
       <div className="flex flex-col gap-1">
         <label {...getLabelProps()} className="flex items-center gap-x-1">
           {label}
-          <Tooltip>{tooltip}</Tooltip>
+          <Tooltip ariaLabel={`dropdown-${type}`}>{tooltip}</Tooltip>
         </label>
         <button
-          aria-label="toggle menu"
+          aria-label={`toggle-menu-${type}`}
           className={`flex items-center justify-between bg-white p-2 mb-1 border rounded focus:outline-none focus:ring-2 focus:transition focus:ease-in focus:duration-200 dark:bg-zinc-900/80 ${
             isOpen
               ? "ring-2 ring-blue-500 border-transparent dark:border-transparent transition ease-in duration-200"
