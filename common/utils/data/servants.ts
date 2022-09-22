@@ -1784,4 +1784,19 @@ export const servants = [
     name: "Ortlinde",
     class: "assassin",
   },
+  {
+    id: 362,
+    name: "Sen no Rikyū",
+    class: "berserker",
+  },
+  {
+    id: 363,
+    name: "Yamanami Keisuke",
+    class: "saber",
+  },
+  {
+    id: 364,
+    name: "Iyo",
+    class: "ruler",
+  },
 ];
