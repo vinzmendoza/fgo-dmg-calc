@@ -1799,4 +1799,19 @@ export const servants = [
     name: "Iyo",
     class: "ruler",
   },
+  {
+    id: 365,
+    name: "Huyan Zhuo",
+    class: "assassin",
+  },
+  {
+    id: 366,
+    name: "Huang Feihu",
+    class: "rider",
+  },
+  {
+    id: 367,
+    name: "Nine-Tattoo Dragon Eliza",
+    class: "pretender",
+  },
 ];
