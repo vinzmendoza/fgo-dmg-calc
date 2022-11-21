@@ -1814,4 +1814,9 @@ export const servants = [
     name: "Nine-Tattoo Dragon Eliza",
     class: "pretender",
   },
+  {
+    id: 368,
+    name: "Britomart",
+    class: "lancer",
+  },
 ];
