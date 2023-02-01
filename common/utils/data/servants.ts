@@ -1819,4 +1819,24 @@ export const servants = [
     name: "Britomart",
     class: "lancer",
   },
+  {
+    id: 369,
+    name: "Grigori Rasputin",
+    class: "alterEgo",
+  },
+  {
+    id: 370,
+    name: "Nitocris (Alter)",
+    class: "avenger",
+  },
+  {
+    id: 371,
+    name: "Tezcatlipoca",
+    class: "assassin",
+  },
+  {
+    id: 372,
+    name: "Tlaloc",
+    class: "pretender",
+  },
 ];
