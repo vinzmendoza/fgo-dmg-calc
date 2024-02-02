@@ -1839,4 +1839,169 @@ export const servants = [
     name: "Tlaloc",
     class: "pretender",
   },
+  {
+    id: 373,
+    name: "Kukulkan",
+    class: "foreigner",
+  },
+  {
+    id: 374,
+    name: "High Priestess Johanna",
+    class: "ruler",
+  },
+  {
+    id: 375,
+    name: "Takasugi Shinsaku",
+    class: "archer",
+  },
+  {
+    id: 376,
+    name: "Larva/Tiamat",
+    class: "alterEgo",
+  },
+  {
+    id: 377,
+    name: "Sodom's Beast/Draco",
+    class: "beast",
+  },
+  {
+    id: 378,
+    name: "Locusta",
+    class: "asssassin",
+  },
+  {
+    id: 379,
+    name: "Setanta",
+    class: "saber",
+  },
+  {
+    id: 380,
+    name: "Kashin Koji",
+    class: "assassin",
+  },
+  {
+    id: 381,
+    name: "Bhima",
+    class: "lancer",
+  },
+  {
+    id: 382,
+    name: "Duryodhana",
+    class: "berserker",
+  },
+  {
+    id: 383,
+    name: "Durga",
+    class: "archer",
+  },
+  {
+    id: 384,
+    name: "Medusa",
+    class: "saber",
+  },
+  {
+    id: 385,
+    name: "Aesc the Rain Witch",
+    class: "caster",
+  },
+  {
+    id: 386,
+    name: "Altria Caster",
+    class: "caster",
+  },
+  {
+    id: 387,
+    name: "Suzuka Gozen (Summer Vacation)",
+    class: "rider",
+  },
+  {
+    id: 388,
+    name: "Chloe von Einzbern",
+    class: "avenger",
+  },
+  {
+    id: 389,
+    name: "Cnoc na Riabh Yaraan-doo",
+    class: "foreigner",
+  },
+  {
+    id: 390,
+    name: "Mélusine",
+    class: "ruler",
+  },
+  {
+    id: 391,
+    name: "UDK-Barghest",
+    class: "archer",
+  },
+  {
+    id: 392,
+    name: "Cait Cú Cerpriestess",
+    class: "pretender",
+  },
+  {
+    id: 393,
+    name: "Wandjina",
+    class: "foreigner",
+  },
+  {
+    id: 394,
+    name: "Ptolemaîos",
+    class: "archer",
+  },
+  {
+    id: 395,
+    name: "Sugitani Zenjubou",
+    class: "archer",
+  },
+  {
+    id: 396,
+    name: "Theseus",
+    class: "saber",
+  },
+  {
+    id: 397,
+    name: "Takeda Harunobu",
+    class: "rider",
+  },
+  {
+    id: 398,
+    name: "Nagakura Shinpachi",
+    class: "berserker",
+  },
+  {
+    id: 399,
+    name: "Saika Magoichi",
+    class: "archer",
+  },
+  {
+    id: 400,
+    name: "Uesugi Kenshin",
+    class: "ruler",
+  },
+  {
+    id: 401,
+    name: "Nemo (Santa)",
+    class: "rider",
+  },
+  {
+    id: 402,
+    name: "Yamato Takeru",
+    class: "saber",
+  },
+  {
+    id: 403,
+    name: "Minamoto-no-Raikou/Ushi Gozen",
+    class: "avenger",
+  },
+  {
+    id: 404,
+    name: "Yui Shousetsu",
+    class: "caster",
+  },
+  {
+    id: 405,
+    name: "Miyamoto Iori",
+    class: "saber",
+  },
 ];
